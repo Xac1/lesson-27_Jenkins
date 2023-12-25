@@ -1,0 +1,7 @@
+FROM ghcr.io/xac1/temp2:latest
+
+RUN pip3 install coverage
+
+COPY tests /workdir
+
+ENTRYPOINT [ "python3", "tests.py" ]
